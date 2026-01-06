@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-model = tf.keras.models.load_model("pneumonia_model.h5")
+model = tf.keras.models.load_model("pneumonia_mobilenetv2_streamlit.h5")
 
 st.title("Chest X-Ray Pneumonia Detection")
 st.write("Upload your chest X-ray image and get prediction + heatmap.")
@@ -34,3 +34,4 @@ if uploaded_file is not None:
     
     st.write(f"**Prediction:** {result}")
     st.write(f"**Confidence:** {confidence:.2f}%")
+
